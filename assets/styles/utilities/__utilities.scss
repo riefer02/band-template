@@ -1,6 +1,6 @@
-@use './fonts';
+@use './fonts.module';
 @use './variables.module';
 @use './mixins.module';
-@use './typography';
-@use './base';
+@use './typography.module';
+@use './base.module';
 @use './colors.module';
