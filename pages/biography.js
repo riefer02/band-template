@@ -6,7 +6,6 @@ import { getBandmates } from '../lib/fetchBandmates';
 import styles from '../assets/styles/pages/_biography.module.scss';
 
 export default function Biography({ bandmates }) {
-  console.log(bandmates);
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
@@ -48,7 +47,7 @@ export default function Biography({ bandmates }) {
 }
 
 export async function getServerSideProps(ctx) {
-  let bandmates = await getBandmates();
+  const bandmates = await getBandmates();
 
   return {
     props: {

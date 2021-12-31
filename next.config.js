@@ -2,6 +2,6 @@ const { withPlaiceholder } = require('@plaiceholder/next');
 
 module.exports = withPlaiceholder({
   images: {
-    domains: ['lewdapi.com'],
+    domains: ['lewdapi.com', 'the-lewd-dudes.vercel.app'],
   },
 });
