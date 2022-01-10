@@ -48,8 +48,8 @@ export default function Events({ events }) {
 }
 
 export async function getServerSideProps(ctx) {
-  const events = await getEvents();
   const formattedEvents = [];
+  const events = await getEvents();
 
   for (const event of events) {
     formattedEvents.push(await formatQueriedEventData(event));

@@ -1,24 +1,36 @@
 @import '../utilities/variables.module';
+@import '../utilities//mixins.module';
 
 .bioItem {
   display: flex;
   font-size: 30px;
   background-color: #f4dc9e;
   padding: 0.5rem 0.5rem;
-  margin-top: 1rem;
+  margin: 1rem auto;
   transition: all 0.25s;
   position: relative;
   box-shadow: $box-shadow;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+
+  @include respond(tab-land) {
+    max-width: 700px;
+    flex-direction: row;
+  }
 }
 
 .bioItem__image {
   position: relative;
   overflow: hidden;
-  width: 250px;
-  height: 250px;
+  height: 100%;
+  width: 100%;
 
   img {
     margin-right: auto;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
