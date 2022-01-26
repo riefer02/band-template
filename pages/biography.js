@@ -14,9 +14,9 @@ export default function Biography({ bandmates }) {
   return (
     <Layout title="Biography">
       <div className="container">
-        <div ref={ref}>
+        {/* <div ref={ref}>
           <h2>{`Header inside viewport ${inView}.`}</h2>
-        </div>
+        </div> */}
         <div className={styles.bioList__image}>
           {bandmates.map((i) => {
             const bandmate = i.node.postTypeBandmate;
