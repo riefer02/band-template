@@ -7,7 +7,7 @@
   border: $border-width-global solid $color-black;
   font-weight: bold;
   transition: $transition-fast;
-  box-shadow: $box-shadow;
+  box-shadow: $box-shadow-sm;
 
   &:hover {
     background-color: $color-gray-darker;
