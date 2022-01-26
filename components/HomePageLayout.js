@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../assets/styles/components/_video-background.module.scss';
+import styles from '../assets/styles/components/_homepage-layout.module.scss';
 
 export default function VideoBackground() {
   return (

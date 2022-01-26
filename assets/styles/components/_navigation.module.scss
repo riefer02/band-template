@@ -91,7 +91,11 @@
   }
 
   &.active {
+    background-color: $color-black;
+
     .navToggle__line {
+      background-color: $color-white;
+
       &:nth-child(1) {
         opacity: 0;
         transform: translateX(-100%);

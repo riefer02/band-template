@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import VideoBackground from '../components/VideoBackground';
+import HomePageLayout from '../components/HomePageLayout';
 import Navigation from '../components/Navigation';
 import styles from '../assets/styles/pages/_home.module.scss';
 
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <Navigation />
       <div className={styles.background}>
-        <VideoBackground />
+        <HomePageLayout />
         <div className={styles.homeMarquee}>
           <div className={styles.logoContainer}>
             <i className="icon-tld-logo"></i>
