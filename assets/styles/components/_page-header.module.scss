@@ -1,5 +1,6 @@
 @import '../utilities/colors.module';
-@import '../utilities//variables.module';
+@import '../utilities/variables.module';
+@import '../utilities/typography.module';
 
 .pageHeader__content {
   display: flex;
@@ -12,6 +13,6 @@
 }
 
 .pageHeader {
-  font-size: 60px;
+  @extend .h1;
   margin: 32px 0;
 }

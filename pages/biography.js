@@ -32,8 +32,8 @@ export default function Biography({ bandmates }) {
                   />
                 </div>
                 <div className={styles.bioItem__description}>
-                  <h4>{bandmate.instruments}</h4>
                   <h3>{bandmate.name}</h3>
+                  <h4>{bandmate.instruments}</h4>
                   <h5>{bandmate.quote}</h5>
                   <p>{bandmate.biography}</p>
                 </div>

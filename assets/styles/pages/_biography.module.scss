@@ -1,12 +1,11 @@
 @import '../utilities/variables.module';
 @import '../utilities//mixins.module';
 @import '../utilities/colors.module';
+@import '../utilities/typography.module';
 
 .bioItem {
   display: flex;
-  font-size: 30px;
   background-color: $color-white;
-  padding: 0.5rem 0.5rem;
   margin: 16px auto 32px;
   transition: all 0.25s;
   position: relative;
@@ -40,22 +39,24 @@
   padding: 0 20px;
   width: 100%;
 
-  h4 {
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
+  h3 {
+    @extend .h3;
+    @extend .underline;
+    margin-bottom: 8px;
+    display: inline-block;
   }
 
-  h3 {
-    font-size: 24px;
-    font-weight: bold;
+  h4 {
+    @extend .h4;
+    margin-bottom: 8px;
   }
 
   h5 {
-    font-size: 18px;
+    @extend .h5;
+    margin-bottom: 8px;
   }
 
   p {
-    font-size: 16px;
+    @extend .p;
   }
 }

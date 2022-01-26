@@ -1,14 +1,107 @@
-$font-size-base: 16px;
+@import './variables.module';
+@import './mixins.module';
+@import './colors.module';
 
-$font-size-xs: 13px;
-$font-size-sm: 14px;
-$font-size-md: $font-size-base;
-$font-size-lg: 18px;
-$font-size-xl: 20px;
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-primary;
+}
 
-$font-size-h1: 60px;
-$font-size-h2: 48px;
-$font-size-h3: 36px;
-$font-size-h4: 22px;
-$font-size-h5: 20px;
-$font-size-h6: 16px;
+.h1 {
+  font-size: 36px;
+  line-height: $font-size-h3;
+  font-weight: $font-weight-medium;
+
+  @include respond(tab-port) {
+    font-size: $font-size-h2;
+    line-height: 56px;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-h1;
+    line-height: 68px;
+  }
+}
+
+.h2 {
+  font-size: $font-size-h4;
+  line-height: 32px;
+  font-weight: $font-weight-medium;
+
+  @include respond(tab-port) {
+    font-size: $font-size-h3;
+    line-height: 44px;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-h2;
+    line-height: 56px;
+  }
+}
+
+.h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: $font-weight-medium;
+
+  @include respond(tab-port) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-h3;
+    line-height: 44px;
+  }
+}
+
+.h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: $font-weight-bold;
+
+  @include respond(desktop) {
+    font-size: $font-size-h4;
+    line-height: 30px;
+  }
+}
+
+.h5 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: $font-weight-normal;
+
+  @include respond(desktop) {
+    font-size: $font-size-h5;
+    line-height: 28px;
+  }
+}
+
+.h6 {
+  font-size: $font-size-h6;
+  font-weight: $font-weight-normal;
+  line-height: 24px;
+}
+
+.p {
+  margin: 0;
+  font-size: $font-size-lg;
+  line-height: 22px;
+}
+
+.underline {
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: $color-black;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+  }
+}
