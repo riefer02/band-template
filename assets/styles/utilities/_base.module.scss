@@ -1,14 +1,7 @@
 @import './variables.module';
+@import './colors.module';
 
 body {
   font-family: $font-family-primary;
-  background: rgb(255, 237, 188);
-  background: radial-gradient(
-    circle,
-    rgba(255, 237, 188, 1) 0%,
-    rgba(237, 66, 100, 1) 100%
-  );
-}
-
-main {
+  background: $color-white;
 }

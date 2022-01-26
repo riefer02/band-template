@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../assets/styles/components/_navigation.module.scss';
 
 export default function Navigation() {
   const [isActive, setActive] = useState(false);
-  const [audio] = useState(
-    typeof Audio !== 'undefined' && new Audio('/audio/nav-open-mgs.mp3')
-  );
-
-  useEffect(() => {
-    audio.paused ? audio.play() : '';
-  }, [isActive]);
-
-  useEffect(() => {
-    console.log('route changed');
-  }, []);
 
   return (
     <div className={styles.nav}>
@@ -28,6 +17,7 @@ export default function Navigation() {
 
 function NavBody({ isActive }) {
   const navItems = ['biography', 'music', 'events', 'store', 'videos', 'misc'];
+
   return (
     <div
       className={`${styles.navOverlay} ${isActive ? styles.activeOverlay : ''}`}
@@ -60,12 +50,7 @@ function NavBody({ isActive }) {
 
 function NavToggle({ isActive, setActive }) {
   return (
-    <div
-      className={styles.navToggle}
-      onClick={() => {
-        setActive(!isActive);
-      }}
-    >
+    <div className={styles.navToggle} onClick={() => setActive(!isActive)}>
       <div
         className={`${styles.navToggle__button} ${
           isActive ? styles.active : ''

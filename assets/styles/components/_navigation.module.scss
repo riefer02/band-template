@@ -48,7 +48,7 @@
   width: 25px;
   padding: 25px;
   border-radius: 50%;
-  background-color: palegreen;
+  background-color: $color-white;
   cursor: pointer;
   @apply shadow-md;
   position: relative;
@@ -104,7 +104,7 @@
   }
 
   .navToggle__line {
-    background-color: rgb(18, 18, 18);
+    background-color: $color-black;
     display: block;
     transition: all 0.3s ease-in-out;
     width: 32px;
@@ -135,7 +135,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba($color-black, 0.8);
   opacity: 0;
   transition: $transition-fast;
   overflow: hidden;
@@ -159,12 +159,12 @@
   height: 100%;
   right: 0;
   width: 100%;
-  background-color: palevioletred;
+  background-color: $color-white;
   padding: 10px;
   transform: translateX(100%);
   transition: $transition-fast;
   transition-delay: 0.2s;
-  border-left: 10px solid rgb(164, 75, 143);
+  border-left: 10px solid $color-black;
 
   @include respond(tab-port) {
     width: 80%;
@@ -269,6 +269,7 @@
   &:hover {
     .navList__text {
       font-size: 30px;
+      color: $color-white;
 
       @include respond(tab-port) {
         font-size: 45px;
@@ -303,7 +304,7 @@
   &::before {
     position: absolute;
     width: 150%;
-    background-color: rgb(255, 255, 255);
+    background-color: $color-black;
     content: '';
     height: 65%;
     top: 50%;

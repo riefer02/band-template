@@ -1,3 +1,5 @@
+@import './colors.module';
+
 /* raleway-regular - latin */
 @font-face {
   font-family: 'Raleway';
@@ -66,15 +68,15 @@
 
 .icon-facebook:before {
   content: '\e900';
-  color: #1877f2;
+  color: $color-blue;
 }
 .icon-instagram:before {
   content: '\e901';
-  color: #e4405f;
+  color: $color-red;
 }
 .icon-spotify:before {
   content: '\e902';
-  color: #1ed760;
+  color: $color-green;
 }
 .icon-tld-logo:before {
   content: '\e903';

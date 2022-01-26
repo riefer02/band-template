@@ -1,10 +1,11 @@
 @import '../utilities/variables.module';
 @import '../utilities//mixins.module';
+@import '../utilities/colors.module';
 
 .bioItem {
   display: flex;
   font-size: 30px;
-  background-color: #f4dc9e;
+  background-color: $color-white;
   padding: 0.5rem 0.5rem;
   margin: 1rem auto;
   transition: all 0.25s;
